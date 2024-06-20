@@ -4,10 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Links & Navigation</title>
+
+    <!-- style dentro da head para stylizar de forma global uma tag--> 
+    <style>
+      span {
+        color: red;
+      }
+      
+      div {
+        border: 1px solid black ;
+      }
+
+      .negrito {
+        font-weight: bold;
+        font-size: x-large;
+      }
+    </style>
+
   </head>
   <body>
-    <ul>
-      <li>
+    <!-- class negrito stytizando toda a lag ul-->
+    <ul class="negrito">
+
+      <!-- stylizando essa tag em inline para ficar diferente da sua tag pai que herda a class negrito-->
+      <li style="font-weight: normal;">
         <a
           href="/Developer-web-fullstack/aula_html03/navigation/contacts.html" target="_self">
           Contatos
@@ -30,5 +50,33 @@
         </a>
       </li>
     </ul>
+
+    <!-- div e usando style inline --> 
+    <div style="color: blue; font-size: 20px;">
+      oiee
+      <div style="color: chartreuse; font-size: 30px;">
+        oiii
+      </div>
+    </div>
+
+    <header>
+      kakakaka
+    </header>
+
+    <nav>
+      hahahahaha
+    </nav>
+
+    <table>
+      <tr>
+        <td>
+          "linha 1 coluna 1"
+        </td>
+        <td>
+          "linha 1 coluna 2"
+        </td>
+      </tr>
+    </table>
+
   </body>
 </html>
