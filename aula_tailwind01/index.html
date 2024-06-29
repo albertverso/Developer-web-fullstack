@@ -1,46 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <nav class="flex flex-col px-[200px] py-2 gap-2">
-        <div class="flex flex-row gap-10 items-center">
-            <div class="flex flex-row items-center gap-2">
-                <img src="/aula_tailwind01/pngwing.com (1).png" alt="" width="80px" height="60px">
-                <div class="font-bold text-2xl">
-                    NIKE
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tailwind</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <nav
+            class="flex flex-col px-4 py-2 gap-2 sm:px-8 md:px-20 lg:px-36 xl:px-40">
+            <div
+                class="flex flex-col items-center gap-2 md:flex-row md:items-center lg:gap-4 xl:gap-8">
+                <div
+                    class="flex flex-col items-center justify-center gap-2 xl:flex-row">
+                    <img
+                        src="../aula_tailwind01/images/pngwing.com (1).png"
+                        alt=""
+                        width="80px"
+                        height="60px" />
+                    <div class="font-bold text-2xl">NIKE</div>
+                </div>
+                <div
+                    class="h-[40px] w-full xl:w-[600px] rounded-full border border-slate-100 bg-slate-100 flex items-center px-4 focus-within:border-red-600">
+                    <input
+                        type="text"
+                        class="h-[38px] w-full xl:w-[540px] border-transparent rounded-full bg-slate-100 focus:outline-none text-lg pr-2" />
+                    <img
+                        class="w-5 h-5"
+                        src="../aula_tailwind01/images/searchmagnifierinterfacesymbol1_79893.svg"
+                        alt="Search" />
+                </div>
+                <div class="underline text-red-600">Cadastre-se</div>
+                <div>
+                    <button
+                        class="bg-red-600 text-white font-bold py-2 px-4 rounded w-[150px]">
+                        Entrar
+                    </button>
+                </div>
+                <div class="xl:pl-8 lg:pl-2 md:pl-0">
+                    <img
+                        class="w-5 h-5 max-w-5"
+                        src="../aula_tailwind01/images/icons8-carrinho-de-compras-24.png"
+                        alt="Carrinho" />
                 </div>
             </div>
-            <div class="w-[600px] h-[40px] rounded-full bg-slate-100 flex flex-row items-center px-4 hover:border hover:border-red-600">
-                <input class="w-[540px] h-[38px] border-transparent rounded-full bg-slate-100 focus:outline-none text-lg pr-2">
-                <img src="/aula_tailwind01/searchmagnifierinterfacesymbol1_79893.svg" alt="" width="20px" height="20px">
+            <div
+                class="flex flex-col items-center sm:flex-row sm:justify-center sm:items-center gap-2 sm:gap-10 font-bold md:justify-start lg:justify-start">
+                <div class="hover:text-red-600 hover:cursor-pointer">HOME</div>
+                <div class="hover:text-red-600 hover:cursor-pointer">
+                    PRODUCTS
+                </div>
+                <div class="hover:text-red-600 hover:cursor-pointer">
+                    CATEGORIES
+                </div>
+                <div class="hover:text-red-600 hover:cursor-pointer">
+                    MY REQUESTS
+                </div>
             </div>
-            <div>3</div>
-            <div>4</div>
-        </div>
-        <div class="flex flex-row gap-10 font-bold ">
-            <div class="hover:text-red-600 hover:cursor-pointer">HOME</div>
-            <div class="hover:text-red-600 hover:cursor-pointer">PRODUCTS</div>
-            <div class="hover:text-red-600 hover:cursor-pointer">CATEGORIES</div>
-            <div class="hover:text-red-600 hover:cursor-pointer">CART</div>
-        </div>
-    </nav>
-    <section class="px-[200px] py-2 flex items-center justify-center bg-red-200 gap-[200px] h-[500px]">
-        <div class="py-[50px]">
-            <p>aaaaaaaaaaaaaaaaa</p>
-            <p>bbbbbbbbbbbbbbbbb</p>
-            <p>ccccccccccccccccc</p>
-            <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-red-600">
-                Ver Ofertas
-            </button>
-        </div>
-        <div>
-            <img src="/aula_tailwind01/pngwing.com.png" alt="" width="300px" height="300px">
-        </div>
-    </section>
-</body>
+        </nav>
+        <section
+            class="px-4 sm:px-8 md:px-20 lg:px-36 xl:px-40 flex flex-col lg:flex-row items-center bg-red-200 gap-4 lg:gap-[200px] lg:h-[500px]">
+            <div
+                class="flex flex-col gap-2 py-4 items-center lg:text-left lg:items-start">
+                <p class="text-xl text-blue-500 font-bold">
+                    Melhores ofertas personalizadas
+                </p>
+                <p class="text-6xl font-bold">Queima de <br />stoque Nike 🔥</p>
+                <p>
+                    Consequat culpa exercitation mollit nisi excepteur do <br />
+                    do tempor laboris eiusmod irure consectetur.
+                </p>
+                <button
+                    class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-red-600 mt-4 pt-3 pb-3 w-[200px]">
+                    Ver Ofertas
+                </button>
+            </div>
+            <div class="pt-10">
+                <img
+                    class="w-[350px] h-[480px] rotate-12"
+                    src="../aula_tailwind01/images/tenis.png"
+                    alt="Imagem" />
+            </div>
+        </section>
+    </body>
 </html>
