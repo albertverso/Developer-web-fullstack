@@ -5,67 +5,119 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tailwind</title>
         <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .bg-custom-blusa {
+                background-image: url("../aula_tailwind01/images/blusa.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .bg-custom-tenis {
+                background-image: url("../aula_tailwind01/images/tenis-destaques.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .bg-custom-fone {
+                background-image: url("../aula_tailwind01/images/fone.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        </style>
     </head>
     <body>
-        <nav
-            class="flex flex-col px-4 py-2 gap-2 sm:px-8 md:px-20 lg:px-36 xl:px-40">
-            <div
-                class="flex flex-col items-center gap-2 md:flex-row md:items-center lg:gap-4 xl:gap-8">
-                <div
-                    class="flex flex-col items-center justify-center gap-2 xl:flex-row">
+        <div
+            class="flex flex-col px-4 pt-5 pb-5 py-2 gap-4 sm:px-8 md:px-20 lg:px-36 xl:px-40">
+            <div class="flex flex-rox items-center gap-4 lg:gap-4 xl:gap-8">
+                <div>
                     <img
-                        src="../aula_tailwind01/images/pngwing.com (1).png"
+                        src="../aula_tailwind01/images/icon-nike.png"
                         alt=""
                         width="80px"
                         height="60px" />
-                    <div class="font-bold text-2xl">NIKE</div>
+                </div>
+                <div class="font-bold text-2xl hidden lg:block">
+                    <p>NIKE</p>
                 </div>
                 <div
-                    class="h-[40px] w-full xl:w-[600px] rounded-full border border-slate-100 bg-slate-100 flex items-center px-4 focus-within:border-red-600">
+                    class="h-[46px] hidden lg:flex w-full rounded-full border border-slate-100 bg-slate-100 items-center px-4 focus-within:border-red-600">
                     <input
                         type="text"
-                        class="h-[38px] w-full xl:w-[540px] border-transparent rounded-full bg-slate-100 focus:outline-none text-lg pr-2" />
+                        class="h-[38px] w-full border-transparent rounded-full bg-slate-100 focus:outline-none text-lg pr-2" />
                     <img
                         class="w-5 h-5"
                         src="../aula_tailwind01/images/searchmagnifierinterfacesymbol1_79893.svg"
                         alt="Search" />
                 </div>
-                <div class="underline text-red-600">Cadastre-se</div>
+                <div
+                    class="underline text-red-600 w-[200px] text-center hidden lg:block hover:text-blue-600 cursor-pointer">
+                    <p>Cadastre-se</p>
+                </div>
                 <div>
                     <button
-                        class="bg-red-600 text-white font-bold py-2 px-4 rounded w-[150px]">
+                        class="bg-red-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded w-[160px] hidden lg:block">
                         Entrar
                     </button>
                 </div>
-                <div class="xl:pl-8 lg:pl-2 md:pl-0">
-                    <img
-                        class="w-5 h-5 max-w-5"
-                        src="../aula_tailwind01/images/icons8-carrinho-de-compras-24.png"
-                        alt="Carrinho" />
+                <div class="ml-auto flex flex-row gap-8">
+                    <div class="lg:hidden">
+                        <img
+                            class="w-5 h-5 max-w-5"
+                            src="../aula_tailwind01/images/icon-coracao.png"
+                            alt="Carrinho" />
+                    </div>
+                    <div class="lg:pl-10">
+                        <img
+                            class="w-5 h-5 max-w-5"
+                            src="../aula_tailwind01/images/icon-carrinho-de-compras.png"
+                            alt="Carrinho" />
+                    </div>
+                    <div class="lg:hidden">
+                        <img
+                            class="w-5 h-5 max-w-5"
+                            src="../aula_tailwind01/images/menu-aberto.png"
+                            alt="Carrinho" />
+                    </div>
                 </div>
             </div>
+            <nav
+                class="lg:flex flex-col hidden pt-5 pb-5 items-center sm:flex-row sm:justify-center sm:items-center gap-2 sm:gap-10 font-bold md:justify-start lg:justify-start">
+                <div
+                    class="hover:text-red-600 hover:cursor-pointer hover:underline hover:underline-offset-8">
+                    <p>HOME</p>
+                </div>
+                <div
+                    class="hover:text-red-600 hover:cursor-pointer hover:underline hover:underline-offset-8">
+                    <p>PRODUCTS</p>
+                </div>
+                <div
+                    class="hover:text-red-600 hover:cursor-pointer hover:underline hover:underline-offset-8">
+                    <p>CATEGORIES</p>
+                </div>
+                <div
+                    class="hover:text-red-600 hover:cursor-pointer hover:underline hover:underline-offset-8">
+                    <p>MY REQUESTS</p>
+                </div>
+            </nav>
             <div
-                class="flex flex-col items-center sm:flex-row sm:justify-center sm:items-center gap-2 sm:gap-10 font-bold md:justify-start lg:justify-start">
-                <div class="hover:text-red-600 hover:cursor-pointer">HOME</div>
-                <div class="hover:text-red-600 hover:cursor-pointer">
-                    PRODUCTS
-                </div>
-                <div class="hover:text-red-600 hover:cursor-pointer">
-                    CATEGORIES
-                </div>
-                <div class="hover:text-red-600 hover:cursor-pointer">
-                    MY REQUESTS
-                </div>
+                class="flex flex-row lg:hidden h-[46px] w-full rounded-full border border-slate-100 bg-slate-100 items-center px-4 focus-within:border-red-600">
+                <input
+                    type="text"
+                    class="h-[38px] w-full border-transparent rounded-full bg-slate-100 focus:outline-none text-lg pr-2" />
+                <img
+                    class="w-5 h-5"
+                    src="../aula_tailwind01/images/searchmagnifierinterfacesymbol1_79893.svg"
+                    alt="Search" />
             </div>
-        </nav>
+        </div>
         <section
-            class="px-4 sm:px-8 md:px-20 lg:px-36 xl:px-40 flex flex-col lg:flex-row items-center bg-red-200 gap-4 lg:gap-[200px] lg:h-[500px]">
+            class="px-4 sm:px-8 md:px-20 lg:px-36 xl:px-40 flex flex-col lg:flex-row items-center bg-red-200 gap-4 lg:gap-[20px] h-full lg:h-[500px]">
             <div
-                class="flex flex-col gap-2 py-4 items-center lg:text-left lg:items-start">
+                class="flex flex-col gap-2 py-4 items-center text-center lg:text-left lg:items-start w-[400px]">
                 <p class="text-xl text-blue-500 font-bold">
                     Melhores ofertas personalizadas
                 </p>
-                <p class="text-6xl font-bold">Queima de <br />stoque Nike 🔥</p>
+                <p class="text-6xl font-bold">
+                    Queima de <br />estoque Nike 🔥
+                </p>
                 <p>
                     Consequat culpa exercitation mollit nisi excepteur do <br />
                     do tempor laboris eiusmod irure consectetur.
@@ -75,11 +127,81 @@
                     Ver Ofertas
                 </button>
             </div>
-            <div class="pt-10">
+            <div class="md:ml-auto">
                 <img
-                    class="w-[350px] h-[480px] rotate-12"
+                    class="w-full h-auto xl:w-[680px] xl:h-[460px]"
                     src="../aula_tailwind01/images/tenis.png"
                     alt="Imagem" />
+            </div>
+        </section>
+        <section
+            class="flex flex-col px-4 py-8 sm:px-8 md:px-20 lg:px-36 xl:px-40">
+            <div>
+                <p class="text-3xl font-bold">Coleções em destaque</p>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-5 pt-5">
+                <div
+                    class="flex flex-col border w-full h-64 bg-slate-200 rounded-xl p-10 justify-between relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-custom-blusa h-[300px] w-[300px] -rotate-[40deg] translate-x-60 translate-y-12"></div>
+                    <div class="relative z-10">
+                        <div
+                            class="flex border-0 rounded-full bg-lime-300 w-24 h-8 items-center justify-center">
+                            <p>30% OFF</p>
+                        </div>
+                    </div>
+                    <div class="relative z-10">
+                        <p class="text-3xl font-bold">
+                            Novo drop <br />Supreme
+                        </p>
+                    </div>
+                    <div class="relative z-10">
+                        <button
+                            class="bg-gray-100 hover:bg-blue-500 w-48 h-10 rounded-md text-center font-bold text-red-600 hover:text-white">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col border w-full h-64 bg-slate-200 rounded-xl p-10 justify-between relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-custom-tenis h-[200px] w-[280px] -rotate-[10deg] translate-x-48 translate-y-12"></div>
+                    <div class="relative z-10">
+                        <div
+                            class="flex border-0 rounded-full bg-lime-300 w-24 h-8 items-center justify-center">
+                            <p>30% OFF</p>
+                        </div>
+                    </div>
+                    <div class="relative z-10">
+                        <p class="text-3xl font-bold">Coleção <br />Adidas</p>
+                    </div>
+                    <div class="relative z-10">
+                        <button
+                            class="bg-gray-100 hover:bg-blue-500 w-48 h-10 rounded-md text-center font-bold text-red-600 hover:text-white">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col border w-full h-64 bg-slate-200 rounded-xl p-10 justify-between relative overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-custom-fone h-[250px] w-[200px] rotate-[40deg] translate-x-[260px] translate-y-8"></div>
+                    <div class="relative z-10">
+                        <div
+                            class="flex border-0 rounded-full bg-lime-300 w-24 h-8 items-center justify-center">
+                            <p>30% OFF</p>
+                        </div>
+                    </div>
+                    <div class="relative z-10">
+                        <p class="text-3xl font-bold">Novo <br />Beats Bass</p>
+                    </div>
+                    <div class="relative z-10">
+                        <button
+                            class="bg-gray-100 hover:bg-blue-500 w-48 h-10 rounded-md text-center font-bold text-red-600 hover:text-white">
+                            Comprar
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
     </body>

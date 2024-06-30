@@ -1,79 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+        <style>
+            body {
+                background-color: rgb(0, 0, 0);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 20px;
+                color: white;
+                height: 100%;
+                gap: 20px;
+            }
 
-    <style>
-        body {
-            background-color: rgb(0, 0, 0);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 20px;
-            color: white;
-            height: 95vh;
-        }
+            button {
+                background-color: rgb(255, 255, 255);
+                width: 400px;
+                height: 100px;
+                border-radius: 30px;
+                font-size: 30px;
+                font-weight: bold;
+            }
 
-        button {
-            background-color: rgb(255, 255, 255);
-            width: 400px;
-            height: 100px;
-            border-radius: 30px;
-            font-size: 30px;
-            font-weight: bold;
-        }
+            button:hover {
+                outline: none !important;
+                border: 1px solid rgb(216, 78, 232);
+                box-shadow: 0 0 40px rgb(216, 78, 232);
+                background-color: rgb(216, 78, 232);
+                transform: scaleY(1.1) scaleX(1.1);
+                color: white;
+                transition: 0.5s;
+            }
 
-        button:hover {
-            outline: none !important;
-            border: 1px solid rgb(216, 78, 232);
-            box-shadow: 0 0 40px rgb(216, 78, 232);
-            background-color: rgb(216, 78, 232);
-            transform: scaleY(1.1) scaleX(1.1);
-            color: white;
-            transition: 0.50s;
-        }
+            h1 {
+                padding-bottom: 30px;
+            }
 
-        h1 {
-            padding-bottom: 30px;
-        }
+            .direct {
+                position: relative;
+                top: 35vh;
+                left: 80vh;
+            }
 
-        .direct {
-            position: relative;
-            top: 55vh;
-            left: 80vh;
-        }
+            p {
+                margin: 0%;
+                padding-bottom: 5px;
+            }
 
-        p {
-            margin: 0%;
-            padding-bottom: 5px;
-        }
+            a {
+                color: rgb(216, 78, 232);
+            }
+        </style>
+    </head>
 
-        a {
-            color: rgb(216, 78, 232);
-        }
-    </style>
-</head>
+    <body>
+        <h1>PAGES</h1>
+        <button onclick="location.href='landing_page01/index.html'">
+            Landing Page 01
+        </button>
 
-<body>
-    <h1>PAGES</h1>
-    <button onclick="location.href='landing_page01/index.html'">
-        Landing Page 01
-    </button>
+        <button onclick="location.href='aula_tailwind01/index.html'">
+            Page Tailwind Responsive
+        </button>
 
-    <div class="direct">
-        <p>
-            Designed by:
-            <a href="https://www.linkedin.com/in/albertverso"> Albertverso</a>
-        </p>
-        <p>
-            Distributed By:
-            <a href="https://www.linkedin.com/in/albertverso"> Albertverso</a>
-        </p>
-
-    </div>
-</body>
-
+        <div class="direct">
+            <p>
+                Designed by:
+                <a href="https://www.linkedin.com/in/albertverso">
+                    Albertverso</a
+                >
+            </p>
+            <p>
+                Distributed By:
+                <a href="https://www.linkedin.com/in/albertverso">
+                    Albertverso</a
+                >
+            </p>
+        </div>
+    </body>
 </html>
