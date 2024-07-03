@@ -1,0 +1,22 @@
+.bg-custom-blusa {
+    background-image: url("../aula_tailwind01/images/blusa.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-custom-tenis {
+    background-image: url("../aula_tailwind01/images/tenis-destaques.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-custom-fone {
+    background-image: url("../aula_tailwind01/images/fone.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-gradiente-oferta {
+        background: rgb(209, 209, 216);
+            background: linear-gradient(184deg, rgba(209, 209, 216, 1) 0%, rgba(255, 255, 255, 0.5825980050223214) 46%);
+}
