@@ -1,17 +1,30 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tailwind</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="styles.css" />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        screens: {
+                            smooth: "300px",
+                            // Outros breakpoints personalizados
+                        },
+                    },
+                },
+            };
+        </script>
     </head>
 
-    <body class="bg-slate-100">
+    <body class="bg-slate-100 break-all smooth:break-normal">
         <div
             class="flex flex-col px-4 pt-5 pb-5 py-2 gap-4 sm:px-[20px] md:px-[50px] lg:px-[70px] xl:px-[100px] bg-white">
-            <div class="flex flex-rox items-center gap-4 lg:gap-4 xl:gap-8">
+            <div
+                class="flex flex-rox items-center smooth:gap-4 lg:gap-4 xl:gap-8">
                 <div class="w-[150px]">
                     <img
                         src="../aula_tailwind01/images/icon-nike.png"
@@ -51,7 +64,7 @@
                         Entrar
                     </button>
                 </div>
-                <div class="ml-auto flex flex-row gap-8">
+                <div class="ml-auto flex flex-row smooth:gap-8">
                     <div class="lg:hidden">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -282,7 +295,7 @@
                     </div>
                     <div class="relative z-10">
                         <button
-                            class="hover:bg-blue-500 w-48 h-10 rounded-md text-center font-bold text-red-600 hover:text-white">
+                            class="bg-blue-500 hover:bg-red-500 w-48 h-10 rounded-md text-center font-bold text-white">
                             Comprar
                         </button>
                     </div>
@@ -302,7 +315,7 @@
                     </div>
                     <div class="relative z-10">
                         <button
-                            class="hover:bg-blue-500 w-48 h-10 rounded-md text-center font-bold text-red-600 hover:text-white">
+                            class="bg-blue-500 hover:bg-red-500 w-48 h-10 rounded-md text-center font-bold text-white">
                             Comprar
                         </button>
                     </div>
@@ -322,7 +335,7 @@
                     </div>
                     <div class="relative z-10">
                         <button
-                            class="hover:bg-blue-500 w-48 h-10 rounded-md text-center font-bold text-red-600 hover:text-white">
+                            class="bg-blue-500 hover:bg-red-500 w-48 h-10 rounded-md text-center font-bold text-white">
                             Comprar
                         </button>
                     </div>
@@ -471,12 +484,14 @@
 
         <section
             class="flex flex-col px-4 sm:px-[20px] md:px-[50px] lg:px-[70px] xl:px-[100px] gap-5 pb-20">
-            <div class="flex flex-row justify-between">
+            <div class="flex flex-row justify-between w-full">
                 <div>
-                    <p class="text-3xl font-bold">Produtos em alta</p>
+                    <p class="text-2xl sm:text-3xl font-bold">
+                        Produtos em alta
+                    </p>
                 </div>
                 <div
-                    class="flex flex-row items-center gap-2 hover:text-red-500">
+                    class="flex flex-row text-sm sm:text-base items-center gap-2 hover:text-red-500">
                     <p>Ver todos</p>
                     <div>
                         <svg
@@ -497,19 +512,24 @@
             <div class="grid grid-cols-2 gap-5 md:grid-cols-3 xl:grid-cols-4">
                 <div class="flex flex-col">
                     <div
-                        class="flex flex-col w-full h-48 sm:h-64 bg-white overflow-hidden items-center">
+                        class="flex flex-col w-full h-48 sm:h-64 bg-white overflow-hidden items-center relative">
                         <div
                             class="flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
                             <p>30% OFF</p>
                         </div>
                         <div
                             class="flex items-center justify-center h-[134px] w-[160px] sm:w-[248px] mr-8 mt-10 absolute sm:mt-5 sm:relative">
-                            <img src="../aula_tailwind01/images/tenis-produtos.svg" alt="" class="w-[254px] h-[254px] flex items-center">
+                            <img
+                                src="../aula_tailwind01/images/tenis-produtos.svg"
+                                alt=""
+                                class="w-[254px] h-[254px] flex items-center" />
                         </div>
                     </div>
                     <div class="flex flex-col">
                         <p class="font-bold text-sm text-gray-500">Tênis</p>
-                        <p class="text-2xl text-gray-700">K-Swiss V8 - Masculino</p>
+                        <p class="text-2xl text-gray-700">
+                            K-Swiss V8 - Masculino
+                        </p>
                         <div class="flex flex-row text-2xl font-bold gap-2">
                             <p class="text-gray-500 line-through">$200</p>
                             <p>$100</p>
@@ -517,18 +537,25 @@
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <div class="flex flex-col w-full h-48 sm:h-64 bg-white  overflow-hidden items-center">
-                        <div class="flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
+                    <div
+                        class="flex flex-col w-full h-48 sm:h-64 bg-white overflow-hidden items-center relative">
+                        <div
+                            class="flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
                             <p>30% OFF</p>
                         </div>
                         <div
                             class="flex items-center justify-center h-[134px] w-[160px] sm:w-[248px] mr-8 mt-10 absolute sm:mt-5 sm:relative">
-                            <img src="../aula_tailwind01/images/tenis-produtos.svg" alt="" class="w-[254px] h-[254px] flex items-center">
+                            <img
+                                src="../aula_tailwind01/images/tenis-produtos.svg"
+                                alt=""
+                                class="w-[254px] h-[254px] flex items-center" />
                         </div>
                     </div>
                     <div class="flex flex-col">
                         <p class="font-bold text-sm text-gray-500">Tênis</p>
-                        <p class="text-2xl text-gray-700">K-Swiss V8 - Masculino</p>
+                        <p class="text-2xl text-gray-700">
+                            K-Swiss V8 - Masculino
+                        </p>
                         <div class="flex flex-row text-2xl font-bold gap-2">
                             <p class="text-gray-500 line-through">$200</p>
                             <p>$100</p>
@@ -536,18 +563,25 @@
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <div class="flex flex-col w-full h-48 sm:h-64 bg-white  overflow-hidden items-center">
-                        <div class="invisible flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
+                    <div
+                        class="flex flex-col w-full h-48 sm:h-64 bg-white overflow-hidden items-center relative">
+                        <div
+                            class="invisible flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
                             <p>30% OFF</p>
                         </div>
                         <div
                             class="flex items-center justify-center h-[134px] w-[160px] sm:w-[248px] mr-8 mt-10 absolute sm:mt-5 sm:relative">
-                            <img src="../aula_tailwind01/images/tenis-produtos.svg" alt="" class="w-[254px] h-[254px] flex items-center">
+                            <img
+                                src="../aula_tailwind01/images/tenis-produtos.svg"
+                                alt=""
+                                class="w-[254px] h-[254px] flex items-center" />
                         </div>
                     </div>
                     <div class="flex flex-col">
                         <p class="font-bold text-sm text-gray-500">Tênis</p>
-                        <p class="text-2xl text-gray-700">K-Swiss V8 - Masculino</p>
+                        <p class="text-2xl text-gray-700">
+                            K-Swiss V8 - Masculino
+                        </p>
                         <div class="flex flex-row text-2xl font-bold gap-2">
                             <p class="text-gray-500 line-through">$200</p>
                             <p>$100</p>
@@ -555,18 +589,25 @@
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <div class="flex flex-col w-full h-48 sm:h-64 bg-white  overflow-hidden items-center">
-                        <div class="invisible flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
+                    <div
+                        class="flex flex-col w-full h-48 sm:h-64 bg-white overflow-hidden items-center relative">
+                        <div
+                            class="invisible flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
                             <p>30% OFF</p>
                         </div>
                         <div
                             class="flex items-center justify-center h-[134px] w-[160px] sm:w-[248px] mr-8 mt-10 absolute sm:mt-5 sm:relative">
-                            <img src="../aula_tailwind01/images/tenis-produtos.svg" alt="" class="w-[254px] h-[254px] flex items-center">
+                            <img
+                                src="../aula_tailwind01/images/tenis-produtos.svg"
+                                alt=""
+                                class="w-[254px] h-[254px] flex items-center" />
                         </div>
                     </div>
                     <div class="flex flex-col">
                         <p class="font-bold text-sm text-gray-500">Tênis</p>
-                        <p class="text-2xl text-gray-700">K-Swiss V8 - Masculino</p>
+                        <p class="text-2xl text-gray-700">
+                            K-Swiss V8 - Masculino
+                        </p>
                         <div class="flex flex-row text-2xl font-bold gap-2">
                             <p class="text-gray-500 line-through">$200</p>
                             <p>$100</p>
@@ -574,18 +615,25 @@
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <div class="flex flex-col w-full h-48 sm:h-64 bg-white  overflow-hidden items-center">
-                        <div class=" invisible flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
+                    <div
+                        class="flex flex-col w-full h-48 sm:h-64 bg-white overflow-hidden items-center relative">
+                        <div
+                            class="invisible flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
                             <p>30% OFF</p>
                         </div>
                         <div
                             class="flex items-center justify-center h-[134px] w-[160px] sm:w-[248px] mr-8 mt-10 absolute sm:mt-5 sm:relative">
-                            <img src="../aula_tailwind01/images/tenis-produtos.svg" alt="" class="w-[254px] h-[254px] flex items-center">
+                            <img
+                                src="../aula_tailwind01/images/tenis-produtos.svg"
+                                alt=""
+                                class="w-[254px] h-[254px] flex items-center" />
                         </div>
                     </div>
                     <div class="flex flex-col">
                         <p class="font-bold text-sm text-gray-500">Tênis</p>
-                        <p class="text-2xl text-gray-700">K-Swiss V8 - Masculino</p>
+                        <p class="text-2xl text-gray-700">
+                            K-Swiss V8 - Masculino
+                        </p>
                         <div class="flex flex-row text-2xl font-bold gap-2">
                             <p class="text-gray-500 line-through">$200</p>
                             <p>$100</p>
@@ -593,18 +641,25 @@
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <div class="flex flex-col w-full h-48 sm:h-64 bg-white overflow-hidden items-center">
-                        <div class="invisible flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
+                    <div
+                        class="flex flex-col w-full h-48 sm:h-64 bg-white overflow-hidden items-center relative">
+                        <div
+                            class="invisible flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
                             <p>30% OFF</p>
                         </div>
                         <div
                             class="flex items-center justify-center h-[134px] w-[160px] sm:w-[248px] mr-8 mt-10 absolute sm:mt-5 sm:relative">
-                            <img src="../aula_tailwind01/images/tenis-produtos.svg" alt="" class="w-[254px] h-[254px] flex items-center">
+                            <img
+                                src="../aula_tailwind01/images/tenis-produtos.svg"
+                                alt=""
+                                class="w-[254px] h-[254px] flex items-center" />
                         </div>
                     </div>
                     <div class="flex flex-col">
                         <p class="font-bold text-sm text-gray-500">Tênis</p>
-                        <p class="text-2xl text-gray-700">K-Swiss V8 - Masculino</p>
+                        <p class="text-2xl text-gray-700">
+                            K-Swiss V8 - Masculino
+                        </p>
                         <div class="flex flex-row text-2xl font-bold gap-2">
                             <p class="text-gray-500 line-through">$200</p>
                             <p>$100</p>
@@ -612,18 +667,25 @@
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <div class="flex flex-col w-full h-48 sm:h-64 bg-white  overflow-hidden items-center">
-                        <div class="invisible flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
+                    <div
+                        class="flex flex-col w-full h-48 sm:h-64 bg-white overflow-hidden items-center relative">
+                        <div
+                            class="invisible flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
                             <p>30% OFF</p>
                         </div>
                         <div
                             class="flex items-center justify-center h-[134px] w-[160px] sm:w-[248px] mr-8 mt-10 absolute sm:mt-5 sm:relative">
-                            <img src="../aula_tailwind01/images/tenis-produtos.svg" alt="" class="w-[254px] h-[254px] flex items-center">
+                            <img
+                                src="../aula_tailwind01/images/tenis-produtos.svg"
+                                alt=""
+                                class="w-[254px] h-[254px] flex items-center" />
                         </div>
                     </div>
                     <div class="flex flex-col">
                         <p class="font-bold text-sm text-gray-500">Tênis</p>
-                        <p class="text-2xl text-gray-700">K-Swiss V8 - Masculino</p>
+                        <p class="text-2xl text-gray-700">
+                            K-Swiss V8 - Masculino
+                        </p>
                         <div class="flex flex-row text-2xl font-bold gap-2">
                             <p class="text-gray-500 line-through">$200</p>
                             <p>$100</p>
@@ -631,18 +693,25 @@
                     </div>
                 </div>
                 <div class="flex flex-col">
-                    <div class="flex flex-col w-full h-48 sm:h-64 bg-white  overflow-hidden items-center">
-                        <div class="invisible flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
+                    <div
+                        class="flex flex-col w-full h-48 sm:h-64 bg-white overflow-hidden items-center relative">
+                        <div
+                            class="invisible flex border-0 items-center justify-center rounded-full bg-lime-300 w-24 h-8 mt-4 ml-4 self-start">
                             <p>30% OFF</p>
                         </div>
                         <div
                             class="flex items-center justify-center h-[134px] w-[160px] sm:w-[248px] mr-8 mt-10 absolute sm:mt-5 sm:relative">
-                            <img src="../aula_tailwind01/images/tenis-produtos.svg" alt="" class="w-[254px] h-[254px] flex items-center">
+                            <img
+                                src="../aula_tailwind01/images/tenis-produtos.svg"
+                                alt=""
+                                class="w-[254px] h-[254px] flex items-center" />
                         </div>
                     </div>
                     <div class="flex flex-col">
                         <p class="font-bold text-sm text-gray-500">Tênis</p>
-                        <p class="text-2xl text-gray-700">K-Swiss V8 - Masculino</p>
+                        <p class="text-2xl text-gray-700">
+                            K-Swiss V8 - Masculino
+                        </p>
                         <div class="flex flex-row text-2xl font-bold gap-2">
                             <p class="text-gray-500 line-through">$200</p>
                             <p>$100</p>
@@ -651,31 +720,141 @@
                 </div>
             </div>
         </section>
-        <section>
-            <div class="flex flex-row items-center justify-center gap-20 bg-white pt-20 px-4 sm:px-[20px] md:px-[50px] lg:px-[70px] xl:px-[100px]"> 
-                <div class="relative">
-                    <div class="flex items-center justify-center rounded-full bg-gradiente-oferta w-[600px] h-[600px]"><img class="absolute mb-10 mr-16" src="/aula_tailwind01/images/tenis-oferta-especial.svg" alt=""></div>
+        <section class="mb-5 lg:mb-0">
+            <div
+                class="flex flex-col items-center justify-center lg:gap-20 bg-white pt-20 px-4 sm:px-[20px] md:px-[50px] lg:px-[70px] xl:px-[100px] lg:flex-row">
+                <div class="flex relative">
+                    <div
+                        class="flex items-center justify-center rounded-full bg-gradiente-oferta w-full sm:w-[400px] xl:w-[500px] m-4 sm:m-10">
+                        <img
+                            class="w-full mb-36 invisible"
+                            src="/aula_tailwind01/images/tenis-oferta-especial.svg"
+                            alt="" />
+                    </div>
+                    <img
+                        class="absolute w-full mt-8 sm:mt-12"
+                        src="/aula_tailwind01/images/tenis-oferta-especial.svg"
+                        alt="" />
                 </div>
-                <div>
-                    <div class="flex flex-col gap-2 py-4 items-center text-center lg:text-left lg:items-start w-full lg:w-[500px]">
-                        <p class="text-xl text-blue-500 font-bold">
-                            Melhores ofertas personalizadas
-                        </p>
-                        <p class="text-6xl font-bold">
-                            Queima de <br />estoque Nike 🔥
-                        </p>
-                        <p>
-                            Consequat culpa exercitation mollit nisi
-                            excepteur do <br />
-                            do tempor laboris eiusmod irure consectetur.
-                        </p>
-                        <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-red-600 mt-4 pt-3 pb-3 w-[200px]"">
+
+                <div
+                    class="flex flex-col gap-2 lg:py-4 items-center text-center lg:text-left lg:items-start w-full">
+                    <p class="text-xl text-red-500 font-bold">
+                        Oferta especial
+                    </p>
+
+                    <p class="text-3xl sm:text-6xl font-bold">
+                        Air Jordan edição de colecionador
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip
+                    </p>
+                    <div class="w-full px-12 sm:px-0">
+                        <button
+                            class="bg-red-500 text-white font-bold py-2 rounded hover:bg-blue-500 w-full sm:w-[250px]">
                             Ver Ofertas
                         </button>
                     </div>
                 </div>
             </div>
         </section>
+        <footer
+            class="flex flex-col bg-black h-full text-white px-4 lg:pt-5 py-2 gap-4 sm:px-[20px] md:px-[50px] lg:px-[70px] xl:px-[100px]">
+            <div
+                class="grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-10 lg:gap-40 mb-10 mt-4 lg:mt-10">
+                <div class="flex flex-col col-span-2 md:col-span-1 gap-5">
+                    <div class="flex flex-row items-center gap-2">
+                        <div>
+                            <img
+                                class=""
+                                src="../aula_tailwind01/images/icon-nike-white.png"
+                                alt=""
+                                width="80px"
+                                height="60px" />
+                        </div>
+                        <div class="font-bold text-2xl">
+                            <p>NIKE</p>
+                        </div>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore.
+                    </p>
+                    <div class="flex flex-row gap-5 items-center">
+                        <img
+                            class="cursor-pointer"
+                            width="14px"
+                            height="14px"
+                            src="../aula_tailwind01/images/facebook.svg"
+                            alt="" />
+                        <img
+                            class="cursor-pointer"
+                            width="28px"
+                            height="28px"
+                            src="../aula_tailwind01/images/instagram.svg"
+                            alt="" />
+                        <img
+                            class="cursor-pointer"
+                            width="30px"
+                            height="30px"
+                            src="../aula_tailwind01/images/twitter.svg"
+                            alt="" />
+                    </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                    <p class="text-2xl font-bold">Informação</p>
+                    <nav class="flex flex-col gap-2">
+                        <p class="hover:text-red-500 cursor-pointer">
+                            Sobre Drip Store
+                        </p>
+                        <p class="hover:text-red-500 cursor-pointer">
+                            Segurança
+                        </p>
+                        <p class="hover:text-red-500 cursor-pointer">
+                            Wishilist
+                        </p>
+                        <p class="hover:text-red-500 cursor-pointer">Blog</p>
+                        <p class="hover:text-red-500 cursor-pointer">
+                            Trabalhe conosco
+                        </p>
+                        <p class="hover:text-red-500 cursor-pointer">
+                            Meus pedidos
+                        </p>
+                    </nav>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <p class="text-2xl font-bold">Categorias</p>
+                    <nav class="flex flex-col gap-2">
+                        <p class="hover:text-red-500 cursor-pointer">Camisas</p>
+                        <p class="hover:text-red-500 cursor-pointer">Calças</p>
+                        <p class="hover:text-red-500 cursor-pointer">Bonés</p>
+                        <p class="hover:text-red-500 cursor-pointer">
+                            Headphones
+                        </p>
+                        <p class="hover:text-red-500 cursor-pointer">Tênis</p>
+                    </nav>
+                </div>
+                <div class="flex flex-col gap-5 col-span-2 md:col-span-1">
+                    <p class="text-2xl font-bold">Categorias</p>
+                    <address class="flex flex-col gap-2">
+                        <p class="hover:text-red-500 cursor-pointer">
+                            Av. Santos Dumont, 1510 - 1 andar - Aldeota,
+                            Fortaleza - CE, 60150-161
+                        </p>
+                        <p class="hover:text-red-500 cursor-pointer">
+                            (85) 3051-3411
+                        </p>
+                    </address>
+                </div>
+            </div>
+            <div class="flex items-center justify-center border-t pt-4 pb-4">
+                <p>@ 2022 Digital College</p>
+            </div>
+        </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     </body>
