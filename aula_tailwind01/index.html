@@ -96,21 +96,65 @@
                         </svg>
                     </div>
                     <div class="lg:hidden">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke-width="1.5"
-                            stroke="currentColor"
-                            class="size-6 hover:text-red-500 cursor-pointer">
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                        </svg>
+                        <button id="menu-btn" class="flex rounded focus:outline-none">    
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke-width="1.5"
+                                stroke="currentColor"
+                                class="size-6 hover:text-red-500 cursor-pointer">
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </button>
+        
                     </div>
                 </div>
             </div>
+
+            <div class="flex">
+                <!-- Sidebar -->
+                <div
+                    id="sidebar"
+                    class="fixed inset-y-0 right-0 transform translate-x-full transition-transform duration-300 w-64 h-screen bg-red-200 text-white flex flex-col z-40">
+                    <div class="flex flex-row items-center justify-between">
+                        <div class="p-4 text-2xl font-semibold">Menu</div>
+                        <!-- Close Button -->
+                        <button
+                            id="close-btn"
+                            class="flex z-50 rounded focus:outline-none pr-5">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 hover:text-red-500 cursor-pointer">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                              </svg>
+                              
+                        </button>
+                    </div>
+                    <nav class="flex flex-col flex-1 p-2 font-semibold">
+                        <a href="#" class="p-2 rounded hover:bg-red-600"
+                            >HOME</a
+                        >
+                        <a
+                            href="#"
+                            class="p-2 rounded hover:bg-red-600"
+                            >PRODUTOS</a
+                        >
+                        <a
+                            href="#"
+                            class="p-2 rounded hover:bg-red-600"
+                            >CATEGORIAS</a
+                        >
+                        <a
+                            href="#"
+                            class="p-2 rounded hover:bg-red-600"
+                            >MEUS PEDIDOS</a
+                        >
+                    </nav>
+                </div>
+            </div>   
+
             <nav
                 class="lg:flex flex-col hidden pt-5 pb-5 items-center sm:flex-row sm:justify-center sm:items-center gap-2 sm:gap-10 font-bold md:justify-start lg:justify-start">
                 <div
@@ -722,9 +766,9 @@
                 </div>
             </div>
         </section>
-        <section class="mb-5 lg:mb-0">
+        <section class="lg:mb-0">
             <div
-                class="flex flex-col items-center justify-center lg:gap-20 bg-white pt-20 px-4 sm:px-[20px] md:px-[50px] lg:px-[70px] xl:px-[100px] lg:flex-row">
+                class="flex flex-col items-center justify-center lg:gap-20 bg-white pb-10 pt-20 px-4 sm:px-[20px] md:px-[50px] lg:px-[70px] xl:px-[100px] lg:flex-row">
                 <div class="flex relative">
                     <div
                         class="flex items-center justify-center rounded-full bg-gradiente-oferta w-full sm:w-[400px] xl:w-[500px] m-4 sm:m-10">
@@ -857,6 +901,8 @@
                 <p>@ 2022 Digital College</p>
             </div>
         </footer>
+
+        <script src="/aula_tailwind01/script.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     </body>
